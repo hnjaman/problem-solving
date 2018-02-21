@@ -8,14 +8,19 @@ public class MakingAnagrams {
         //System.out.println(sf);
        // System.out.println(ss);
         int count = 0;
-        for(int i=0;i<sf.length();i++){
-            for(int j = 0; j<ss.length();j++){
+        for(int i=0;i<sf.length();){
+            int j;
+            for( j = 0; j<ss.length();j++){
                 if(sf.charAt(i)==ss.charAt(j)){
                     sf.deleteCharAt(i);
                     ss.deleteCharAt(j);
-                    count=count+2;
+                    count++;
+                    //i=0;
                     break;
                 }
+            }
+            if(sf.charAt(i)!=ss.charAt(j)){
+                i++;
             }
         }
         System.out.println(sf);
