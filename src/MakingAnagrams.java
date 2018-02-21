@@ -5,27 +5,20 @@ public class MakingAnagrams {
     public static int numberNeeded(String first, String second) {
         StringBuilder sf = new StringBuilder(first);
         StringBuilder ss = new StringBuilder(second);
-        //System.out.println(sf);
-       // System.out.println(ss);
+
         int count = 0;
-        for(int i=0;i<sf.length();){
+        for(int i=0;i<sf.length();i++){
             int j;
             for( j = 0; j<ss.length();j++){
-                if(sf.charAt(i)==ss.charAt(j)){
-                    sf.deleteCharAt(i);
-                    ss.deleteCharAt(j);
-                    count++;
-                    //i=0;
+                if(sf.charAt(i) == ss.charAt(j)){
+                    sf.setCharAt(i,'0');
+                    ss.setCharAt(j,'0');
+                    count=count+2;
                     break;
                 }
             }
-            if(sf.charAt(i)!=ss.charAt(j)){
-                i++;
-            }
         }
-        System.out.println(sf);
-        System.out.println(ss);
-        return sf.length()+ss.length();
+        return sf.length()+ss.length()-count;
     }
 
     public static void main(String[] args) {
