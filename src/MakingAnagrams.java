@@ -1,6 +1,11 @@
 
 import java.util.Scanner;
-
+/*  Input:  cde
+*           abc
+*
+*   output: 4
+*   # removed d,e,a,b this 4
+* */
 public class MakingAnagrams {
     public static int numberNeeded(String first, String second) {
         StringBuilder sf = new StringBuilder(first);
