@@ -1,25 +1,28 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class RecursiveDigitSum {
 
     static int result;
 
-    static int super_digit(String string,int p){
+    static BigInteger super_digit(String string, int p){
 
-        int sum=0;
+        BigInteger sum= BigInteger.valueOf(0);
+        int len=string.length();
         char[] chars = string.toCharArray();
+        int lenc=chars.length;
         if(p>1){
             for(int i=0;i<chars.length;i++)
-                sum+=Character.getNumericValue(chars[i]);
-            sum*=p;
+                sum=sum.add(BigInteger.valueOf(Character.getNumericValue(chars[i])));
+            sum=sum.multiply(BigInteger.valueOf(p));
         }
         else {
             for(int i=0;i<chars.length;i++)
-                sum+=Character.getNumericValue(chars[i]);
+                sum=sum.add(BigInteger.valueOf(Character.getNumericValue(chars[i])));
         }
 
-        if(sum>10)
-            return super_digit(Integer.toString(sum),1);
+        if(sum.toString().length()>1)
+            return super_digit(sum.toString(),1);
         else
             return sum;
     }
@@ -30,7 +33,7 @@ public class RecursiveDigitSum {
         String number = in.next();
         int times = in.nextInt();
         //System.out.println(number);
-        if(number.length()>1&&times>1){
+        if(number.length()>=1&&times>1){
             System.out.println(super_digit(number,times));
         }
         else{
