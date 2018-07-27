@@ -18,8 +18,6 @@ public class ValidUsernameRegularEx {
         int n = Integer.parseInt(scan.nextLine());
         while (n-- != 0) {
             String userName = scan.nextLine();
-
-
             if (userName.matches(UsernameValidator.regularExpression)) {
                 System.out.println("Valid");
             } else {
