@@ -1,20 +1,21 @@
 package hackjava;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Test {
     public static void main(String args[]){
-       // System.out.println(Pattern.matches("[a-zA-Z0-9]{6}", "arun32"));//true
-      //  System.out.println(Pattern.matches("[a-zA-Z0-9]{6}", "kkvarun32"));//false (more than 6 char)
-      //  System.out.println(Pattern.matches("[a-zA-Z0-9]{6}", "JA2Uk2"));//true
-        Scanner sc =new Scanner(System.in);
-        String username=sc.next();
-        boolean result=Pattern.matches("[^0-9_?][a-zA-Z0-9[_]]{7,30}", username);
-        if(result) {
-            System.out.println("Valid");//false ($ is not matched)
-        }else {
-            System.out.println("Invalid");
-        }
+       String s="-100";
+       String s2="50";
+        BigDecimal a=new BigDecimal(s);
+        System.out.println(a);
+        a=new BigDecimal(s2);
+        System.out.println(a);
+//        if(b!=a) {
+//            System.out.println("n");//false ($ is not matched)
+//        }else {
+//            System.out.println("e");
+//        }
     }
 }
