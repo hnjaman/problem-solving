@@ -27,19 +27,5 @@ public class JavaMap {
                 System.out.println("Not found");
             }
         }
-
-//        for(int i=0;i<n;i++){
-//            String s=in.nextLine();
-//            int count=0;
-//            for (Map.Entry<String,Integer> entry: phonebook.entrySet()) {
-//                if(entry.getKey().equals(s)){
-//                    count=1;
-//                    System.out.println(entry.getKey()+"="+entry.getValue());
-//                }
-//            }
-//            if(count==0){
-//                System.out.println("Not found");
-//            }
-//        }
     }
 }
