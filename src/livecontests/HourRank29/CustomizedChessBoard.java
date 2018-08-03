@@ -9,36 +9,44 @@ public class CustomizedChessBoard {
         Scanner in =new Scanner(System.in);
         int n=in.nextInt();
         in.nextLine();
+
         while(n-- !=0){
             int t=in.nextInt();
-            t=t*t;
-            //List<Integer> arr =new ArrayList<>();
+            //in.nextLine();
             List<List<Integer>> arr=new ArrayList<>();
-            List<Integer> list=new ArrayList<>();
-            int j=0;
-            while(j++ <t){
-                list.add(in.nextLine().split(" "));
-            }
-            arr.add(list);
-            //in.nextInt();
+            int l=0;
 
-            int count0=0;
-            int count1=0;
-            for (int k = 0; k < t-1; k++) {
-
-                if(arr.get(k).compareTo(arr.get(k+1))==1){
-                    count0=1;
-                }else {
-                    count0=-1;
-                    break;
+            while (l<t){
+                List<Integer> list=new ArrayList<>();
+                int j=0;
+                while(j<t){
+                    list.add(in.nextInt());
+                    j++;
                 }
+                arr.add(l,list);
+                //list.clear();
+                l++;
+                //in.nextLine();
+            }
+                //arr.get(k).get(m).compareTo(arr.get(k).get(m + 1))
+            int count=0;
+            for (int k = 0; k < t; k++){
+                for (int m = 0; m < t-1; m++) {
+                    if (arr.get(k).get(m)!=arr.get(k).get(m+1)){
+                        count = 1;
+                    }else{
+                        count = -1;
+                        break;
+                    }
+                }
+                if(count==-1)
+                    break;
             }
 
-            if(count0==-1)
+            if(count==-1)
                 System.out.println("No");
-            if(count0==1)
+            if(count==1)
                 System.out.println("Yes");
-
         }
     }
 }

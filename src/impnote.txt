@@ -1,0 +1,4 @@
+The Scanner has a little buffer (1KB char buffer) as opposed to the BufferedReader
+(8KB byte buffer), but it's more than enough. BufferedReader is a bit faster as
+compared to Scanner because Scanner does parsing of input data and BufferedReader
+simply reads sequence of characters.
