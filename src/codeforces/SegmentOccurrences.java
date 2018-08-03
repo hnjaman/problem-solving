@@ -11,10 +11,10 @@ public class SegmentOccurrences {
         int q=in.nextInt();
         String s=in.next();
         String t=in.next();
-        StringBuilder ss=new StringBuilder();
-        ss.append(s.substring(0,n));
-        StringBuilder tt=new StringBuilder();
-        tt.append(t.substring(0,m));
+//        StringBuilder ss=new StringBuilder();
+//        ss.append(s.substring(0,n));
+//        StringBuilder tt=new StringBuilder();
+//        tt.append(t.substring(0,m));
 //        System.out.println(ss);
 //        System.out.println(tt);
         in.nextLine();
@@ -24,18 +24,18 @@ public class SegmentOccurrences {
             StringBuilder seg=new StringBuilder();
             int l=in.nextInt();
             int r=in.nextInt();
-            seg.append(ss.substring(l-1,r));
+            seg.append(s.substring(l-1,r));
             int len1=seg.length();
-            int len2=tt.length();
-            if(tt.length()>seg.length()){
+            int len2=t.length();
+            if(t.length()>seg.length()){
                 System.out.println(0);
-            }else if(seg.toString().equals(tt.toString())){
+            }else if(seg.toString().equals(t)){
                 System.out.println(1);
-            }else if(seg.toString().substring(len1-len2,len1).equals(tt.toString())){
-                String[] arr=seg.toString().split(tt.toString());
+            }else if(seg.toString().substring(len1-len2,len1).equals(t)){
+                String[] arr=seg.toString().split(t);
                 System.out.println(arr.length);
             }else {
-                String[] arr=seg.toString().split(tt.toString());
+                String[] arr=seg.toString().split(t);
                 System.out.println(arr.length-1);
             }
             //System.out.println(arr.length-1);
