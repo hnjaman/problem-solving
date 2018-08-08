@@ -21,15 +21,25 @@ public class SegmentOccurrences {
        // String hello = "HelloxxxHelloxxxHello";
 
         int fromIndex;
-        int count;
+        //int count;
             while(i<q){
-                count = 0;
+                //count = 0;
                 int l=in.nextInt();
                 int r=in.nextInt();
                 String seg=new String(s.substring(l-1,r));
-               // String strFind = "Java";
-                int count1 = ( seg.split(t, -1).length ) - 1;
-                System.out.println(count1);
+                //String str = "helloslkhellodjladfjhello";
+                //String findStr = "hello";
+                int lastIndex = 0;
+                int count = 0;
+
+                while(lastIndex != -1){
+                    lastIndex = seg.indexOf(t,lastIndex);
+                    if(lastIndex != -1){
+                        count ++;
+                        lastIndex += t.length();
+                    }
+                }
+                System.out.println(count);
                 i++;
             }
     }
