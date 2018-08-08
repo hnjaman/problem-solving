@@ -1,7 +1,7 @@
 package codeforces;
 
 import java.util.Scanner;
-
+//http://codeforces.com/contest/1015/problem/A
 public class PointsinSegments {
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
