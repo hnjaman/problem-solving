@@ -1,9 +1,7 @@
 package codeforces;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
+//https://www.javacodeexamples.com/java-count-occurrences-of-substring-in-string-example/724
 //http://codeforces.com/contest/1016/problem/B
 public class SegmentOccurrences {
     public static void main(String[] args) {
@@ -22,21 +20,18 @@ public class SegmentOccurrences {
 
        // String hello = "HelloxxxHelloxxxHello";
 
+        int fromIndex;
         int count;
             while(i<q){
                 count = 0;
                 int l=in.nextInt();
                 int r=in.nextInt();
                 String seg=new String(s.substring(l-1,r));
-                Pattern pattern = Pattern.compile(t);
-                Matcher matcher = pattern.matcher(seg);
-                while (matcher.find())
-                    count++;
-                System.out.println(count);
-
+               // String strFind = "Java";
+                int count1 = ( seg.split(t, -1).length ) - 1;
+                System.out.println(count1);
                 i++;
             }
-
     }
 }
 
