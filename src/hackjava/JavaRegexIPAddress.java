@@ -3,6 +3,8 @@ package hackjava;
 import java.util.Scanner;
 
 class MyRegex{
+  // mobile number validation 
+//   ^01([5-9]{1})([0-9]{8})|013([0-9]{8})$
    
 (
    25[0-5]{0,1}|           // 250 - 255
