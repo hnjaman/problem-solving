@@ -24,11 +24,12 @@ public class ElementsofaLinkedList {
 
         public void insertNode(int nodeData) {
             SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
-
+// here head next and tail always will be the same object
             if (this.head == null) {
                 this.head = node;
             } else {
-                this.tail.next = node;
+                this.tail.next = node;  // represent last node ..... where to add next node
+                this.head.next = node;  // head.next.next......... not possible to fatch the last node.
             }
 
             this.tail = node;
@@ -46,8 +47,8 @@ public class ElementsofaLinkedList {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        SinglyLinkedList llist = new SinglyLinkedList();
 
+        SinglyLinkedList llist = new SinglyLinkedList();
 
         int llistCount = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
