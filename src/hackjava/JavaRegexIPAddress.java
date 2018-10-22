@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 class MyRegex{
   // mobile number validation 
-//   ^01([5-9]{1})([0-9]{8})|013([0-9]{8})$
+  // ^01([5-9]{1})([0-9]{8})|013([0-9]{8})$
+  // ^0([1-9]{1})|1([0-2]{1})$    -- month 01, 12 etc validation
    
 (
    25[0-5]{0,1}|           // 250 - 255
