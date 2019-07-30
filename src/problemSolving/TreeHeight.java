@@ -1,6 +1,5 @@
-package ProblemSolving;
+package problemSolving;
 import java.util.*;
-import java.io.*;
 
 class Node {
     Node left;

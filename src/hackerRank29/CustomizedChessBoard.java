@@ -1,4 +1,4 @@
-package livecontests.HourRank29;
+package hackerRank29;
 
 import java.util.ArrayList;
 import java.util.List;

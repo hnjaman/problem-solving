@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemSolving;
 
 // Java program to demonstrate insert operation in binary search tree
 class TreeInOrder {

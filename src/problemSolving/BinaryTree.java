@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemSolving;
 
 public class BinaryTree {
 

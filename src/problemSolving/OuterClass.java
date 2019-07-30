@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemSolving;
 
 public class OuterClass {
     private static String msg = "GeeksForGeeks";

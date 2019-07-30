@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemSolving;
 
 public class StaticClass {
     // How to create instance of static and non static nested class?
