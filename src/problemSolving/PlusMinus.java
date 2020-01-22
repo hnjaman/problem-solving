@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class PlusMinus {
     // Complete the plusMinus function below.
     static void plusMinus(int[] arr) {
-        float p=0, n=0, z=0;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>0){
+        float p = 0, n = 0, z = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
                 p++;
-            }else if(arr[i]<0){
+            } else if (arr[i] < 0) {
                 n++;
-            }else{
+            } else {
                 z++;
             }
         }
-        System.out.println(p/arr.length);
-        System.out.println(n/arr.length);
-        System.out.println(z/arr.length);
+        System.out.println(p / arr.length);
+        System.out.println(n / arr.length);
+        System.out.println(z / arr.length);
     }
 
     private static final Scanner scanner = new Scanner(System.in);

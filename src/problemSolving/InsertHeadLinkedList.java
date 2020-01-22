@@ -35,9 +35,9 @@ public class InsertHeadLinkedList {
     static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
 
         // SinglyLinkedListNode node=new SinglyLinkedListNode(data);
-        SinglyLinkedListNode node=new SinglyLinkedListNode(data);
+        SinglyLinkedListNode node = new SinglyLinkedListNode(data);
 
-        node.next=llist;    // total previous linked list is set to current nodes next position
+        node.next = llist;    // total previous linked list is set to current nodes next position
 
         return node;
     }

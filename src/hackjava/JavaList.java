@@ -30,8 +30,8 @@ public class JavaList {
             }
         }
 
-        for (Integer e: l) {
-            System.out.print(e+" ");
+        for (Integer e : l) {
+            System.out.print(e + " ");
         }
     }
 }

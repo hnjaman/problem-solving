@@ -7,10 +7,10 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class JavaDateandTime {
-    public static DayOfWeek getDay(String day, String month, String year){
-        int a=Integer.parseInt(day);
-        int b=Integer.parseInt(month);
-        int c=Integer.parseInt(year);
+    public static DayOfWeek getDay(String day, String month, String year) {
+        int a = Integer.parseInt(day);
+        int b = Integer.parseInt(month);
+        int c = Integer.parseInt(year);
         LocalDate dt = LocalDate.of(c, b, a);
 //        Calendar ca=Calendar.getInstance();
 ////        Date d1 = new Date(2000, 11, 21);
@@ -53,9 +53,9 @@ public class JavaDateandTime {
 //        String month = in.next();
 //        String day = in.next();
 //        String year = in.next();
-        int month =in.nextInt();
-        int day =in.nextInt();
-        int year=in.nextInt();
+        int month = in.nextInt();
+        int day = in.nextInt();
+        int year = in.nextInt();
         in.close();
 
         //System.out.println(getDay(day, month, year));

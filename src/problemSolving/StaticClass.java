@@ -2,7 +2,7 @@ package problemSolving;
 
 public class StaticClass {
     // How to create instance of static and non static nested class?
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         // create instance of nested Static class
         OuterClass.NestedStaticClass printer = new OuterClass.NestedStaticClass();
@@ -14,7 +14,7 @@ public class StaticClass {
         // instance. Let us create Outer class instance for creating
         // non-static nested class
         OuterClass outer = new OuterClass();
-        OuterClass.InnerClass inner  = outer.new InnerClass();
+        OuterClass.InnerClass inner = outer.new InnerClass();
 
         // calling non-static method of Inner class
         inner.display();

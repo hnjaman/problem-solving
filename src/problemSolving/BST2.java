@@ -2,8 +2,8 @@ package problemSolving;
 
 public class BST2 {
 
-    public static boolean left=false;
-    public static boolean right=false;
+    public static boolean left = false;
+    public static boolean right = false;
 
     public static boolean checkBST(Node root) {
 
@@ -11,7 +11,7 @@ public class BST2 {
 
         if (root == null) return false;
 
-        if(root.left != null) {
+        if (root.left != null) {
             if (root.left.data > root.data || root.left.data < Integer.parseInt(r)) {
                 left = true;
             } else {
@@ -19,7 +19,7 @@ public class BST2 {
             }
         }
 
-        if(root.right != null){
+        if (root.right != null) {
             if (root.right.data < root.data || root.right.data > Integer.parseInt(r)) {
                 right = true;
             } else {
@@ -27,14 +27,13 @@ public class BST2 {
             }
         }
 
-        if(left || right)
+        if (left || right)
             return false;
         else
             return true;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Node root;
         /*create root*/
         root = new Node(20);
@@ -44,7 +43,7 @@ public class BST2 {
 
 
         root.left.left = new Node(1);
-       // root.left.right = new Node(100);
+        // root.left.right = new Node(100);
 
         root.right.right = new Node(30);
 
@@ -55,10 +54,10 @@ public class BST2 {
              /   \       /  \
             1    100  null  30
          */
-        boolean result =checkBST(root);
-        if(result){
+        boolean result = checkBST(root);
+        if (result) {
             System.out.println("YES");
-        }else{
+        } else {
             System.out.println("NO");
         }
     }

@@ -9,17 +9,17 @@ public class BalanceBrakets {
     }
 
     private static boolean checkBalanceBrakets(char[] charBrakets) {
-        if(charBrakets.length==0)
+        if (charBrakets.length == 0)
             return true;
         Stack<Character> stackBrakets = new Stack<>();
-        for (char c : charBrakets){
-            if(stackBrakets.empty()){
+        for (char c : charBrakets) {
+            if (stackBrakets.empty()) {
                 stackBrakets.push(c);
-            }else{
+            } else {
                 char peek = stackBrakets.peek();
-                if((peek=='{' && c=='}') || (peek=='(' && c==')' || (peek=='[' && c==']'))){
+                if ((peek == '{' && c == '}') || (peek == '(' && c == ')' || (peek == '[' && c == ']'))) {
                     stackBrakets.pop();
-                }else {
+                } else {
                     stackBrakets.push(c);
                 }
             }

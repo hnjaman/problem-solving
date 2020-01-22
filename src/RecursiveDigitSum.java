@@ -5,24 +5,23 @@ public class RecursiveDigitSum {
 
     static int result;
 
-    static BigInteger super_digit(String string, int p){
+    static BigInteger super_digit(String string, int p) {
 
-        BigInteger sum= BigInteger.valueOf(0);
-        int len=string.length();
+        BigInteger sum = BigInteger.valueOf(0);
+        int len = string.length();
         char[] chars = string.toCharArray();
-        int lenc=chars.length;
-        if(p>1){
-            for(int i=0;i<chars.length;i++)
-                sum=sum.add(BigInteger.valueOf(Character.getNumericValue(chars[i])));
-            sum=sum.multiply(BigInteger.valueOf(p));
-        }
-        else {
-            for(int i=0;i<chars.length;i++)
-                sum=sum.add(BigInteger.valueOf(Character.getNumericValue(chars[i])));
+        int lenc = chars.length;
+        if (p > 1) {
+            for (int i = 0; i < chars.length; i++)
+                sum = sum.add(BigInteger.valueOf(Character.getNumericValue(chars[i])));
+            sum = sum.multiply(BigInteger.valueOf(p));
+        } else {
+            for (int i = 0; i < chars.length; i++)
+                sum = sum.add(BigInteger.valueOf(Character.getNumericValue(chars[i])));
         }
 
-        if(sum.toString().length()>1)
-            return super_digit(sum.toString(),1);
+        if (sum.toString().length() > 1)
+            return super_digit(sum.toString(), 1);
         else
             return sum;
     }
@@ -33,10 +32,9 @@ public class RecursiveDigitSum {
         String number = in.next();
         int times = in.nextInt();
         //System.out.println(number);
-        if(number.length()>=1&&times>1){
-            System.out.println(super_digit(number,times));
-        }
-        else{
+        if (number.length() >= 1 && times > 1) {
+            System.out.println(super_digit(number, times));
+        } else {
             System.out.println(number);
         }
 

@@ -16,14 +16,14 @@ public class BinaryTree {
 //        root = null;
 //    }
 
-    public static boolean left=false;
-    public static boolean right=false;
+    public static boolean left = false;
+    public static boolean right = false;
 
     public static boolean checkBST(Node root) {
 
         if (root == null) return false;
 
-        if(root.left != null) {
+        if (root.left != null) {
             if (root.left.data > root.data) {
                 left = true;
             } else {
@@ -31,7 +31,7 @@ public class BinaryTree {
             }
         }
 
-        if(root.right != null){
+        if (root.right != null) {
             if (root.right.data < root.data) {
                 right = true;
             } else {
@@ -39,14 +39,13 @@ public class BinaryTree {
             }
         }
 
-        if(left || right)
+        if (left || right)
             return false;
         else
             return true;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         Node root;
         /*create root*/
@@ -81,9 +80,9 @@ public class BinaryTree {
          */
 
         boolean result = checkBST(root);
-        if(result){
+        if (result) {
             System.out.printf("YES");
-        }else {
+        } else {
             System.out.printf("NO");
         }
     }
