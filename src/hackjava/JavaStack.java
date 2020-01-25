@@ -7,18 +7,18 @@ public class JavaStack {
     private static boolean isBalanced(String exp) {
         Stack<Character> stack = new Stack<>();
         char[] chars = exp.toCharArray();
-        for (char achar : chars){
-            if(stack.empty()){
+        for (char achar : chars) {
+            if (stack.empty()) {
                 stack.push(achar);
-            }else {
+            } else {
                 char peek = stack.peek();
-                if(peek=='(' && achar == ')'){
+                if (peek == '(' && achar == ')') {
                     stack.pop();
-                }else if(peek == '{' && achar == '}'){
+                } else if (peek == '{' && achar == '}') {
                     stack.pop();
-                }else if(peek == '[' && achar == ']'){
+                } else if (peek == '[' && achar == ']') {
                     stack.pop();
-                }else {
+                } else {
                     stack.push(achar);
                 }
             }
@@ -27,10 +27,10 @@ public class JavaStack {
     }
 
     public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-       // String[] brackets = {"(()){}()","({})","({}(","){})"};
+        Scanner in = new Scanner(System.in);
+        // String[] brackets = {"(()){}()","({})","({}(","){})"};
 
-        while(in.hasNext()){
+        while (in.hasNext()) {
             String brackets = in.nextLine();
             // for(String exp : brackets){
             String isBalanced = isBalanced(brackets) ? "true" : "false";

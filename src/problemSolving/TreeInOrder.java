@@ -1,10 +1,10 @@
-package ProblemSolving;
+package problemSolving;
 
 // Java program to demonstrate insert operation in binary search tree
 class TreeInOrder {
 
-    public static int countright=0;
-    public static int countleft=0;
+    public static int countright = 0;
+    public static int countleft = 0;
 
     /* Class containing left and right child of current node and key value*/
     class Node {
@@ -50,7 +50,7 @@ class TreeInOrder {
     }
 
     // This method mainly calls InorderRec()
-    void inorder()  {
+    void inorder() {
         inorderRec(root);
     }
 
@@ -61,16 +61,14 @@ class TreeInOrder {
             //  # in order                          20 30 40 50 60 70 80
 //            inorderRec(root.left);
 //            System.out.print(root.key+" ");
-            if(root.left != null){
+            if (root.left != null) {
                 inorderRec(root.left);
                 countleft++;
             }
-            if(root.right != null){
+            if (root.right != null) {
                 inorderRec(root.right);
                 countright++;
             }
-
-
 
 
             //  # pre order                         50 30 20 40 70 60 80
@@ -122,9 +120,9 @@ class TreeInOrder {
 // 2 1 14 15 12
         // print inorder traversal of the BST
         tree.inorder();
-        if (countleft>countright){
+        if (countleft > countright) {
             System.out.println(countleft);
-        }else{
+        } else {
             System.out.println(countright);
         }
     }

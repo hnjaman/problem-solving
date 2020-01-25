@@ -16,27 +16,23 @@ public class Btfullday {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        int i=in.nextInt();
-        int j=in.nextInt();
-        int k=in.nextInt();
-        int count=0;
+        int i = in.nextInt();
+        int j = in.nextInt();
+        int k = in.nextInt();
+        int count = 0;
 
-        for(int x=i;x<=j;x++) {
+        for (int x = i; x <= j; x++) {
             int reverseX = reverse(x);
-           // System.out.println(reverseX);
+            // System.out.println(reverseX);
 
-            int resultI = Math.abs(x-reverseX)/k;
+            int resultI = Math.abs(x - reverseX) / k;
 
-            double resultD = Math.abs(x-reverseX)/(double)k;
-          //  System.out.println(resultI+"--"+resultD);
-
-            if(resultI==resultD){
+            double resultD = Math.abs(x - reverseX) / (double) k;
+            //  System.out.println(resultI+"--"+resultD);
+            if (resultI == resultD) {
                 count++;
             }
-
         }
-
         System.out.println(count);
-
     }
 }

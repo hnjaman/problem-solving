@@ -1,6 +1,6 @@
-package ProblemSolving;
+package problemSolving;
+
 import java.util.*;
-import java.io.*;
 
 class Node {
     Node left;
@@ -13,13 +13,14 @@ class Node {
         right = null;
     }
 }
+
 public class TreeHeight {
 
-    public static int countright=0;
-    public static int countleft=0;
+    public static int countright = 0;
+    public static int countleft = 0;
 
     public static int height(Node root) {
-        if(root == null){
+        if (root == null) {
             return -1;
         }
 
@@ -42,18 +43,18 @@ public class TreeHeight {
 //           // }
 // //       }
 
-        if (countleft>countright)
+        if (countleft > countright)
             return countleft;
         else
             return countright;
     }
 
     public static Node insert(Node root, int data) {
-        if(root == null) {
+        if (root == null) {
             return new Node(data);
         } else {
             Node cur;
-            if(data <= root.data) {
+            if (data <= root.data) {
                 cur = insert(root.left, data);
                 root.left = cur;
             } else {
@@ -68,7 +69,7 @@ public class TreeHeight {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt();
         Node root = null;
-        while(t-- > 0) {                    // o(t)
+        while (t-- > 0) {                    // o(t)
             int data = scan.nextInt();
             root = insert(root, data);      // o(n) recurtion
         }

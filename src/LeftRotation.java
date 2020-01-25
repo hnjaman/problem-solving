@@ -7,17 +7,16 @@ public class LeftRotation {
         int k = in.nextInt();
         int a[] = new int[n];
 
-        for(int i = 0;i<n; i++){
-            if(i<k){
-                a[(n-k)+i]=in.nextInt();
-            }
-            else {
-                a[i-k]=in.nextInt();
+        for (int i = 0; i < n; i++) {
+            if (i < k) {
+                a[(n - k) + i] = in.nextInt();
+            } else {
+                a[i - k] = in.nextInt();
             }
         }
 
-        for(int i=0;i<n;i++){
-            System.out.print(a[i]+" ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(a[i] + " ");
         }
     }
 }

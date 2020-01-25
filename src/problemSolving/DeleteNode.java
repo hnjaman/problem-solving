@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemSolving;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class DeleteNode {
         }
     }
 
-    public static void printSinglyLinkedList(SinglyLinkedListNode node){
+    public static void printSinglyLinkedList(SinglyLinkedListNode node) {
         while (node != null) {
             System.out.print(node.data);
             node = node.next;
@@ -52,20 +52,20 @@ public class DeleteNode {
         System.out.println(head.hashCode());
         System.out.println(head.next.hashCode());
 
-        if(head == null) { // if head null and position is zero set at the head.
+        if (head == null) { // if head null and position is zero set at the head.
             return head;
         }
-        if(position == 0){
+        if (position == 0) {
             return head.next;
         }
 
         int count = 0;
         int i = 0;
-        while(i < position) { //loop until find the given position.
+        while (i < position) { //loop until find the given position.
             previous = current;
             current = current.next;
 
-            if(current.next == null)
+            if (current.next == null)
                 break;
             i++;
         }

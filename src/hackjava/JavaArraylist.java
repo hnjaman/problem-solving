@@ -5,22 +5,22 @@ import java.util.Scanner;
 
 public class JavaArraylist {
     public static void main(String[] args) {
-        Scanner in =new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         ArrayList<ArrayList<Integer>> lists = new ArrayList<>();
-        int n=in.nextInt();
-        while(n-- !=0){
-            int d=in.nextInt();
-            ArrayList<Integer> list =new ArrayList<>();
-            while (d-- !=0){
+        int n = in.nextInt();
+        while (n-- != 0) {
+            int d = in.nextInt();
+            ArrayList<Integer> list = new ArrayList<>();
+            while (d-- != 0) {
                 list.add(in.nextInt());
             }
             lists.add(list);
         }
 
-        int q=in.nextInt();
-        for(int i=0;i<q;i++){
-            int x=in.nextInt();
-            int y=in.nextInt();
+        int q = in.nextInt();
+        for (int i = 0; i < q; i++) {
+            int x = in.nextInt();
+            int y = in.nextInt();
 //            if(y>lists.get(x-1).size()){
 //                System.out.println("ERROR!");
 //            }else{
@@ -34,7 +34,7 @@ public class JavaArraylist {
                 System.out.println("ERROR!");
             }
 
-           // lists.get(x-1).get(y-1);
+            // lists.get(x-1).get(y-1);
         }
     }
 }

@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemSolving;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -7,18 +7,18 @@ public class BalancedBrakets {
     private static boolean isBalanced(String exp) {
         Stack<Character> stack = new Stack<>();
         char[] chars = exp.toCharArray();
-        for (char achar : chars){
-            if(stack.empty()){
+        for (char achar : chars) {
+            if (stack.empty()) {
                 stack.push(achar);
-            }else {
+            } else {
                 char peek = stack.peek();
-                if(peek=='(' && achar == ')'){
+                if (peek == '(' && achar == ')') {
                     stack.pop();
-                }else if(peek == '{' && achar == '}'){
+                } else if (peek == '{' && achar == '}') {
                     stack.pop();
-                }else if(peek == '[' && achar == ']'){
+                } else if (peek == '[' && achar == ']') {
                     stack.pop();
-                }else {
+                } else {
                     stack.push(achar);
                 }
             }
@@ -27,12 +27,12 @@ public class BalancedBrakets {
     }
 
     public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         // String[] brackets = {"(()){}()","({})","({}(","){})"};
         int lim = in.nextInt();
-        int i=1;
+        int i = 1;
         in.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        while(i<=lim){
+        while (i <= lim) {
             String brackets = in.nextLine();
             String isBalanced = isBalanced(brackets) ? "YES" : "NO";
             System.out.println(isBalanced);

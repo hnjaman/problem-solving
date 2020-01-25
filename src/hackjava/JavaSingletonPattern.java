@@ -3,8 +3,10 @@ package hackjava;
 public class JavaSingletonPattern {
     private static JavaSingletonPattern singleton;
     public static String str;
+
     private JavaSingletonPattern() {
     }
+
     public static JavaSingletonPattern getSingleInstance() {
 //        if (singleton == null) {      //## thread safe part
 //            synchronized (JavaSingletonPattern.class) {

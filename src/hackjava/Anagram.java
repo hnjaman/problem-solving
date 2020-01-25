@@ -8,22 +8,22 @@ public class Anagram {
         StringBuilder ss = new StringBuilder(b.toLowerCase());
 
         int count = 0;
-        for(int i=0;i<sf.length();i++){
+        for (int i = 0; i < sf.length(); i++) {
             int j;
-            for( j = 0; j<ss.length();j++){
-                if(sf.charAt(i) == ss.charAt(j)){
-                    sf.setCharAt(i,'0');
-                    ss.setCharAt(j,'0');
-                    count=count+2;
+            for (j = 0; j < ss.length(); j++) {
+                if (sf.charAt(i) == ss.charAt(j)) {
+                    sf.setCharAt(i, '0');
+                    ss.setCharAt(j, '0');
+                    count = count + 2;
                     break;
                 }
             }
         }
 
-        int c=sf.length()+ss.length()-count;
-        if(c==0){
+        int c = sf.length() + ss.length() - count;
+        if (c == 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
         //return false;
@@ -35,7 +35,7 @@ public class Anagram {
         String b = in.next();
         in.close();
         boolean ret = isAnagram(a, b);
-        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
-       // System.out.println(isAnagram(a, b));
+        System.out.println((ret) ? "Anagrams" : "Not Anagrams");
+        // System.out.println(isAnagram(a, b));
     }
 }

@@ -1,13 +1,13 @@
-package ProblemSolving;
+package problemSolving;
 
 import java.util.Scanner;
 
 public class AVeryBigSum {
     // Complete the aVeryBigSum function below.
     static long aVeryBigSum(long[] ar) {
-        long sum=0;
-        for(int i=0;i<ar.length;i++){
-            sum=sum+ar[i];
+        long sum = 0;
+        for (int i = 0; i < ar.length; i++) {
+            sum = sum + ar[i];
         }
         System.out.println(sum);
 
@@ -20,7 +20,7 @@ public class AVeryBigSum {
         //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int arCount = scanner.nextInt();
-       // scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        // scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
         scanner.nextLine();
         long[] ar = new long[arCount];
 

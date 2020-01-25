@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemSolving;
 
 import java.util.Scanner;
 
@@ -38,7 +38,7 @@ public class ElementsofaLinkedList {
 
     static void printLinkedList(SinglyLinkedListNode head) {
         //System.out.println(head.);
-        while ( head != null) {
+        while (head != null) {
             System.out.println(head.data);
             head = head.next;
         }

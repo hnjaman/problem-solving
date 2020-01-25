@@ -1,11 +1,9 @@
-package ProblemSolving;
+package problemSolving;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class InsertTailLinkedList {
+public class InsertHeadLinkedList {
 
     static class SinglyLinkedListNode {
         public int data;
@@ -27,32 +25,26 @@ public class InsertTailLinkedList {
 
     public static void printSinglyLinkedList(SinglyLinkedListNode node) {
         while (node != null) {
+            //   bufferedWriter.write(String.valueOf(node.data));
             System.out.println(node.data);
 
             node = node.next;
         }
     }
 
-    static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
 
-        if (head == null){
-            head = new SinglyLinkedListNode(data);
-         //   head.data = data;
-        }else {
-            SinglyLinkedListNode node = head;
-            while (node.next != null){
-                node = node.next;
-            }
-            node.next = new SinglyLinkedListNode(data);
-           // node.next.data = data;
-        }
-        return head;
+        // SinglyLinkedListNode node=new SinglyLinkedListNode(data);
+        SinglyLinkedListNode node = new SinglyLinkedListNode(data);
+
+        node.next = llist;    // total previous linked list is set to current nodes next position
+
+        return node;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args){
-
+    public static void main(String[] args) throws IOException {
         SinglyLinkedList llist = new SinglyLinkedList();
 
         int llistCount = scanner.nextInt();
@@ -62,11 +54,13 @@ public class InsertTailLinkedList {
             int llistItem = scanner.nextInt();
             scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-            SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, llistItem);
+            SinglyLinkedListNode llist_head = insertNodeAtHead(llist.head, llistItem);
 
             llist.head = llist_head;
         }
 
         printSinglyLinkedList(llist.head);
+
+        scanner.close();
     }
 }
