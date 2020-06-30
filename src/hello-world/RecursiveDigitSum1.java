@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RecursiveDigitSum {
+public class RecursiveDigitSum1 {
 
     static int result;
 

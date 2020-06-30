@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Btfullday {
+public class Btfullday2 {
 
     public static int reverse(int n) {
         int result = 0;

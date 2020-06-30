@@ -2,29 +2,29 @@
 import java.util.Scanner;
 
 /*  Input:  cde
- *           abc
- *
- *   output: 4
- *   # removed d,e,a,b this 4
- * */
+            abc
+
+    output: 4
+    # removed d,e,a,b this 4
+*/
 public class MakingAnagrams {
     public static int numberNeeded(String first, String second) {
-        StringBuilder sf = new StringBuilder(first);
-        StringBuilder ss = new StringBuilder(second);
+        StringBuilder firstString = new StringBuilder(first);
+        StringBuilder secondString = new StringBuilder(second);
 
         int count = 0;
-        for (int i = 0; i < sf.length(); i++) {
+        for (int i = 0; i < firstString.length(); i++) {
             int j;
-            for (j = 0; j < ss.length(); j++) {
-                if (sf.charAt(i) == ss.charAt(j)) {
-                    sf.setCharAt(i, '0');
-                    ss.setCharAt(j, '0');
+            for (j = 0; j < secondString.length(); j++) {
+                if (firstString.charAt(i) == secondString.charAt(j)) {
+                    firstString.setCharAt(i, '0');
+                    secondString.setCharAt(j, '0');
                     count = count + 2;
                     break;
                 }
             }
         }
-        return sf.length() + ss.length() - count;
+        return firstString.length() + secondString.length() - count;
     }
 
     public static void main(String[] args) {

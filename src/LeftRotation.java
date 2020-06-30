@@ -4,14 +4,16 @@ public class LeftRotation {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int k = in.nextInt();
+        int d = in.nextInt();
         int a[] = new int[n];
 
+        int aa = 1;
+
         for (int i = 0; i < n; i++) {
-            if (i < k) {
-                a[(n - k) + i] = in.nextInt();
+            if (i < d) {
+                a[(n - d) + i] = in.nextInt();
             } else {
-                a[i - k] = in.nextInt();
+                a[i - d] = in.nextInt();
             }
         }
 
