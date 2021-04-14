@@ -1,3 +1,5 @@
+package unamed;
+
 public class AestheticsTrees {
     public static void main(String[] args) {
         int[] nums = new int[]{5,7,3,2,6};

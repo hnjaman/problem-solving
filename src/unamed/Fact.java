@@ -1,3 +1,5 @@
+package unamed;
+
 public class Fact {
     public static void main(String[] args) {
         //Scanner in = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package ProblemSolving;
+package problemsolving;
 
 public class WithOutLoopPrint10Hello {
     private static void sum(int m){

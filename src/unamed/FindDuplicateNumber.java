@@ -1,3 +1,5 @@
+package unamed;
+
 import java.util.*;
 
 public class FindDuplicateNumber {

@@ -1,3 +1,4 @@
+package unamed;
 
 import java.util.Scanner;
 
