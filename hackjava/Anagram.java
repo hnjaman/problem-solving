@@ -4,29 +4,25 @@ import java.util.Scanner;
 
 public class Anagram {
     public static boolean isAnagram(String a, String b) {
-        StringBuilder sf = new StringBuilder(a.toLowerCase());
-        StringBuilder ss = new StringBuilder(b.toLowerCase());
+        StringBuilder stringBuilderFirst = new StringBuilder(a.toLowerCase());
+        StringBuilder stringBuilderSecond = new StringBuilder(b.toLowerCase());
 
         int count = 0;
-        for (int i = 0; i < sf.length(); i++) {
-            int j;
-            for (j = 0; j < ss.length(); j++) {
-                if (sf.charAt(i) == ss.charAt(j)) {
-                    sf.setCharAt(i, '0');
-                    ss.setCharAt(j, '0');
+        for (int i = 0; i < stringBuilderFirst.length(); i++) {
+            for (int j = 0; j < stringBuilderSecond.length(); j++) {
+                if (stringBuilderFirst.charAt(i) == stringBuilderSecond.charAt(j)) {
+                    stringBuilderFirst.setCharAt(i, '0');
+                    stringBuilderSecond.setCharAt(j, '0');
                     count = count + 2;
                     break;
                 }
             }
         }
 
-        int c = sf.length() + ss.length() - count;
-        if (c == 0) {
+        int c = stringBuilderFirst.length() + stringBuilderSecond.length() - count;
+        if (c == 0)
             return true;
-        } else {
-            return false;
-        }
-        //return false;
+        return false;
     }
 
     public static void main(String[] args) {
@@ -36,6 +32,5 @@ public class Anagram {
         in.close();
         boolean ret = isAnagram(a, b);
         System.out.println((ret) ? "Anagrams" : "Not Anagrams");
-        // System.out.println(isAnagram(a, b));
     }
 }
