@@ -1,8 +1,9 @@
 package hackjava;
 
 public class Fizzbuzz {
-    public static void main(String[]args){
-        for(int i = 1; i<=100; i++){
+
+    public static void fizzbuzz(int n){
+        for(int i = 1; i<=n; i++){
             if(i % 3 == 0)
                 System.out.print("Fizz");
             if(i%5==0)
@@ -11,5 +12,9 @@ public class Fizzbuzz {
                 System.out.print(i);
             System.out.println();
         }
+    }
+
+    public static void main(String[]args){
+        fizzbuzz(15);
     }
 }
