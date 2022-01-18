@@ -1,8 +1,7 @@
-package ProblemSolving;
+package problemSolving;
 
 import java.io.*;
 import java.util.*;
-import java.util.function.Function;
 
 interface PerformOperation {
     boolean check(int a);
