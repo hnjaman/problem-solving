@@ -64,14 +64,13 @@ class Result {
 
     public static int maximumPages(SinglyLinkedListNode head) {
         int max = 0;
-        int first = 0;
         int last = 0;
         SinglyLinkedListNode copyHead;
         SinglyLinkedListNode headBackup;
 
-            copyHead = head;
-            first = head.data;
-            headBackup = head;
+        while (head != null) {
+            copyHead = head.next;
+            headBackup = head.next;
             while (copyHead != null){
                 if(copyHead.next == null && copyHead.data >= 0){
                     last = copyHead.data;
@@ -84,13 +83,13 @@ class Result {
                     }
                 }
                 copyHead = copyHead.next;
-                if(first+last > max){
-                    max = head.data + last;
-                }
+            }
+            if(head.data+last > max){
+                max = head.data + last;
             }
 
             head = headBackup;
-
+        }
         return max;
     }
 

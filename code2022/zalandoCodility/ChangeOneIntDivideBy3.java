@@ -1,7 +1,8 @@
 package code2022.zalandoCodility;
 
 /**
- * Created by Lenovo on 14/01/2022.
+ * 23
+ * 03 33 63 93 21 24 27 -> 7
  */
 public class ChangeOneIntDivideBy3 {
         public static int findCount(String S) {
