@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class ArrayPair {
@@ -19,6 +20,7 @@ public class ArrayPair {
 
     static void printpairs(int arr[], int sum) {
         HashSet<Integer> hashSet = new HashSet<Integer>();
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < arr.length; ++i) {
             int temp = sum - arr[i];
 
@@ -26,16 +28,20 @@ public class ArrayPair {
             if (hashSet.contains(temp)) {
                 System.out.println("Pair with given sum " + sum + " is (" + arr[i] + ", " + temp + ")");
             }
+            if(hashMap.containsKey(temp)){
+                System.out.println("Pair with given sum " + sum + " is (" + hashMap.get(temp) + ", " + i + ")");
+            }
+            hashMap.put(arr[i], i);
             hashSet.add(arr[i]);
         }
     }
 
     public static void main(String[] args) {
 //        int[] arrayNumbers = {0,-1,2,4};
-        int[] arrayNumbers = {0,1,4,4,5};
+        int[] arrayNumbers = {0,1,4,3,5};
 //        int[] resultPair = getSumPair(arrayNumbers, 8);
 //        System.out.println(resultPair[0]);
 //        System.out.println(resultPair[1]);
-        printpairs(arrayNumbers, 8);
+        printpairs(arrayNumbers, 7);
     }
 }
