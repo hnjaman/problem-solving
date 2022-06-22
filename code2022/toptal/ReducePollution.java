@@ -23,7 +23,7 @@ public class ReducePollution {
     }
 
     public static void main(String[] args) {
-        int[] a = {5,19,8,1};
+        int[] a = {5,19,8,1};   //= 33  16
 //        int[] a = {10,10};
 //        int[] a = {0, 0};
         System.out.println(solution(a));

@@ -1,6 +1,6 @@
 package code2022.toptal;
 
-/**
+/**         8       2   4   6
  * input: Codility we test coders,   14
  * output: Codility we
  * */
